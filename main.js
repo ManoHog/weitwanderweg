@@ -59,13 +59,7 @@ L.control.scale({
 }).addTo(map);
 
 //GPX Track visualisieren
-let controlElevation = L.control.elevation({
-    time: false,
-    elevationDiv: "#profile",
-    height: 300,
-    theme: "bike-tirol"
-}).addTo(map);
-controlElevation.load("./data/etappe29.gpx"); 
+
 
 let controlElevation_T1 = L.control.elevation({
     time: false,
@@ -73,7 +67,7 @@ let controlElevation_T1 = L.control.elevation({
     height: 300,
     theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("./data/Tag 1_Innsbruck_Rauschbrunnen.gpx");
+controlElevation_T1.load("./data/Tag 1_Innsbruck_Rauschbrunnen.gpx");
 
 let controlElevation_T2 = L.control.elevation({
     time: false,
@@ -81,7 +75,7 @@ let controlElevation_T2 = L.control.elevation({
     height: 300,
     theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("./data/Tag 2_Wankspitze.gpx");
+controlElevation_T2.load("./data/Tag 2_Wankspitze.gpx");
 
 let controlElevation_T3 = L.control.elevation({
     time: false,
@@ -89,7 +83,7 @@ let controlElevation_T3 = L.control.elevation({
     height: 300,
     theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("./data/Tag 3_Pirchkogel.gpx");
+controlElevation_T3.load("./data/Tag 3_Pirchkogel.gpx");
 
 let controlElevation_T4 = L.control.elevation({
     time: false,
@@ -97,7 +91,7 @@ let controlElevation_T4 = L.control.elevation({
     height: 300,
     theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("./data/Tag 4_Sellraintaler_Höhenwanderweg.gpx");
+controlElevation_T4.load("./data/Tag 4_Sellraintaler_Höhenwanderweg.gpx");
 
 let controlElevation_T5 = L.control.elevation({
     time: false,
@@ -105,7 +99,7 @@ let controlElevation_T5 = L.control.elevation({
     height: 300,
     theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("./data/Tag 5_Birgitzköpfl.gpx");
+controlElevation_T5.load("./data/Tag 5_Birgitzköpfl.gpx");
 
 let controlElevation_T6 = L.control.elevation({
     time: false,
@@ -113,9 +107,9 @@ let controlElevation_T6 = L.control.elevation({
     height: 300,
     theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("./data/Tag 6_Patscherkofel_Viggarspitze.gpx");
+controlElevation_T6.load("./data/Tag 6_Patscherkofel_Viggarspitze.gpx");
 
-//Pulldown für Navigation
+/*/Pulldown für Navigation
 let pulldown = document.querySelector("#pulldown");
 for (let etappe of ETAPPEN) {
     console.log(etappe);
@@ -132,4 +126,4 @@ pulldown.onchange = function(evt) {
     let url = `https://${pulldown.value}.github.io/biketirol`;
     //console.log(url);
     window.location.href = url; 
-}
+} */
