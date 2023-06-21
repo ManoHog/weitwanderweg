@@ -1,4 +1,4 @@
-/* Bike Trail Tirol Beispiel */
+/* Innsbruck Trek Tirol Beispiel */
 
 // Innsbruck
 let ibk = {
@@ -66,6 +66,14 @@ let controlElevation = L.control.elevation({
     theme: "bike-tirol"
 }).addTo(map);
 controlElevation.load("./data/etappe29.gpx");
+
+let controlElevation_T1 = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+    theme: "bike-tirol"
+}).addTo(map);
+controlElevation.load("./data/Tag 1_Innsbruck_Rauschbrunnen.gpx");
 
 //Pulldown für Navigation
 let pulldown = document.querySelector("#pulldown");
