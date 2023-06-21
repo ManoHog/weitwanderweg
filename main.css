@@ -55,6 +55,12 @@ article {
     margin: auto;
 } /*#maps der Hashtag ist eine ID*/
 
+#profile {
+    width: 90%;
+    border: 1px solid silver;
+    margin: auto;
+}
+
 main>img {
     max-width: 90%;
 }  /*erstes Bild im Header*/
