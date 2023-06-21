@@ -34,6 +34,11 @@ article {
 
         padding: 1em;
     } /*bestimmt den Innenabstand eines Elements zu seinem Rahmen, Von  einem großen "M"*/
+
+    .format {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
     
     article p {
         font-family: 'Roboto', sans-serif;
