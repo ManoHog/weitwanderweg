@@ -11,10 +11,7 @@ let map = L.map("map", {
     fullscreenControl: true, minZoom: 8,
 }).setView([ibk.lat, ibk.lng], 10);
 
-// thematische Layer
-let themaLayer = {
-    route: L.featureGroup()
-}
+
 
 // WMTS Hintergrundlayer der eGrundkarte Tirol definieren
 let eGrundkarteTirol = {
@@ -42,7 +39,7 @@ let layerControl = L.control.layers({
         eGrundkarteTirol.nomenklatur,
     ])
 }, {
-    "Route der Etappe": themaLayer.route.addTo(map)
+   
 }).addTo(map);
 
 // Maßstab
@@ -113,4 +110,3 @@ let controlElevation_T6 = L.control.elevation({
     collapsed: true
 }).addTo(map);
 controlElevation_T6.load("./data/Tag 6_Patscherkofel_Viggarspitze.gpx");
-
