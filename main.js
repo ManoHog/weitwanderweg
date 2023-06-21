@@ -21,10 +21,6 @@ let eGrundkarteTirol = {
     sommer: L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
         attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
     }),
-    winter: L.tileLayer(
-        "https://wmts.kartetirol.t/gdi_winter/{z}/{x}/{y}.png", {
-        attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
-    }),
     ortho: L.tileLayer("https://wmts.kartetirol.at/gdi_ortho/{z}/{x}/{y}.png", {
         attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
     }
@@ -41,10 +37,6 @@ let layerControl = L.control.layers({
         eGrundkarteTirol.sommer,
         eGrundkarteTirol.nomenklatur
     ]).addTo(map),
-    "eGrundkarte Tirol Winter": L.layerGroup([
-        eGrundkarteTirol.winter,
-        eGrundkarteTirol.nomenklatur
-    ]),
     "eGrundkarte Tirol Orthofoto": L.layerGroup([
         eGrundkarteTirol.ortho,
         eGrundkarteTirol.nomenklatur,
@@ -61,11 +53,14 @@ L.control.scale({
 //GPX Track visualisieren
 
 
+
 let controlElevation_T1 = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
-    theme: "bike-tirol"
+    theme: "lime-theme",
+    autofitBounds: false,
+    collapsed: true
 }).addTo(map);
 controlElevation_T1.load("./data/Tag 1_Innsbruck_Rauschbrunnen.gpx");
 
@@ -73,7 +68,9 @@ let controlElevation_T2 = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
-    theme: "bike-tirol"
+    theme: "lime-theme",
+    autofitBounds: false,
+    collapsed: true
 }).addTo(map);
 controlElevation_T2.load("./data/Tag 2_Wankspitze.gpx");
 
@@ -81,7 +78,9 @@ let controlElevation_T3 = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
-    theme: "bike-tirol"
+    theme: "lime-theme",
+    autofitBounds: false,
+    collapsed: true
 }).addTo(map);
 controlElevation_T3.load("./data/Tag 3_Pirchkogel.gpx");
 
@@ -89,7 +88,9 @@ let controlElevation_T4 = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
-    theme: "bike-tirol"
+    theme: "lime-theme",
+    autofitBounds: false,
+    collapsed: true
 }).addTo(map);
 controlElevation_T4.load("./data/Tag 4_Sellraintaler_Höhenwanderweg.gpx");
 
@@ -97,7 +98,9 @@ let controlElevation_T5 = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
-    theme: "bike-tirol"
+    theme: "lime-theme",
+    autofitBounds: false,
+    collapsed: true
 }).addTo(map);
 controlElevation_T5.load("./data/Tag 5_Birgitzköpfl.gpx");
 
@@ -105,7 +108,9 @@ let controlElevation_T6 = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
-    theme: "bike-tirol"
+    theme: "lime-theme",
+    autofitBounds: false,
+    collapsed: true
 }).addTo(map);
 controlElevation_T6.load("./data/Tag 6_Patscherkofel_Viggarspitze.gpx");
 
