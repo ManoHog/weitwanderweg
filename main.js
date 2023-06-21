@@ -65,7 +65,7 @@ let controlElevation = L.control.elevation({
     height: 300,
     theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("./data/etappe29.gpx");
+controlElevation.load("./data/etappe29.gpx"); 
 
 let controlElevation_T1 = L.control.elevation({
     time: false,
@@ -74,6 +74,46 @@ let controlElevation_T1 = L.control.elevation({
     theme: "bike-tirol"
 }).addTo(map);
 controlElevation.load("./data/Tag 1_Innsbruck_Rauschbrunnen.gpx");
+
+let controlElevation_T2 = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+    theme: "bike-tirol"
+}).addTo(map);
+controlElevation.load("./data/Tag 2_Wankspitze.gpx");
+
+let controlElevation_T3 = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+    theme: "bike-tirol"
+}).addTo(map);
+controlElevation.load("./data/Tag 3_Pirchkogel.gpx");
+
+let controlElevation_T4 = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+    theme: "bike-tirol"
+}).addTo(map);
+controlElevation.load("./data/Tag 4_Sellraintaler_Höhenwanderweg.gpx");
+
+let controlElevation_T5 = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+    theme: "bike-tirol"
+}).addTo(map);
+controlElevation.load("./data/Tag 5_Birgitzköpfl.gpx");
+
+let controlElevation_T6 = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+    theme: "bike-tirol"
+}).addTo(map);
+controlElevation.load("./data/Tag 6_Patscherkofel_Viggarspitze.gpx");
 
 //Pulldown für Navigation
 let pulldown = document.querySelector("#pulldown");
