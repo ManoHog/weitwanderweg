@@ -12,7 +12,6 @@ let map = L.map("map", {
 }).setView([ibk.lat, ibk.lng], 10);
 
 
-
 // WMTS Hintergrundlayer der eGrundkarte Tirol definieren
 let eGrundkarteTirol = {
     sommer: L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
